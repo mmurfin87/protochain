@@ -1,14 +1,11 @@
 package com.markmurfin.blockchain.p2p;
 
-import com.markmurfin.blockchain.util.Switch;
 import lombok.AllArgsConstructor;
 import lombok.NonNull;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
-import java.nio.ByteBuffer;
 import java.nio.channels.*;
-import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.function.BooleanSupplier;
 

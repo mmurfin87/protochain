@@ -1,6 +1,5 @@
 package com.markmurfin.blockchain.p2p;
 
-import com.markmurfin.blockchain.util.Switch;
 import lombok.NonNull;
 
 import java.io.BufferedReader;
