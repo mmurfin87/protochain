@@ -5,6 +5,7 @@ import lombok.NonNull;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
+import java.nio.ByteBuffer;
 import java.nio.channels.*;
 import java.util.*;
 import java.util.function.BooleanSupplier;
@@ -121,7 +122,8 @@ public class Node implements Runnable
 
 	public void read(@NonNull final SelectionKey sk, @NonNull final Protocol4Connection peerConnection) throws IOException
 	{
-		final int read = peerConnection.read(readHandler);
+		final ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
+		final int read = peerConnection.read(byteBuffer, readHandler);
 		if (read < 0)
 		{
 			sk.cancel();
